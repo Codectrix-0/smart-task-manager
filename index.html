@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Task Manager</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>🌸 Smart Task Manager</h1>
+
+<button id="themeBtn">🌙 Dark Mode</button>
+
+<div class="auth">
+<input id="email" type="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+<button onclick="signup()">Sign Up</button>
+<button onclick="login()">Login</button>
+</div>
+
+<div class="input-section">
+<input id="taskInput" placeholder="Task">
+<input id="dueDate" type="date">
+
+<select id="category">
+<option>Study</option>
+<option>Work</option>
+<option>Personal</option>
+</select>
+
+<select id="priority">
+<option>High</option>
+<option>Medium</option>
+<option>Low</option>
+</select>
+
+<button onclick="addTask()">Add Task</button>
+</div>
+
+<input id="search" placeholder="Search..." onkeyup="renderTasks()">
+
+<div class="progress-container"><div id="progressBar"></div></div>
+<p id="progressText"></p>
+
+<div class="stats">
+<p>Total: <span id="totalTasks">0</span></p>
+<p>Completed: <span id="completedTasks">0</span></p>
+<p>Pending: <span id="pendingTasks">0</span></p>
+</div>
+
+<button onclick="downloadPDF()">📄 Export PDF</button>
+
+<ul id="taskList"></ul>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
