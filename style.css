@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#ffd6e8;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    transition:0.3s;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+h1{
+    text-align:center;
+    color:#ff4f8b;
+    margin-bottom:20px;
+}
+
+#themeBtn{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.auth{
+    display:grid;
+    grid-template-columns:1fr 1fr auto auto;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.input-section{
+    display:grid;
+    grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1fr
+    auto;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+input,
+select,
+button{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ffb3cc;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border:1px solid #ff4f8b;
+}
+
+button{
+    background:#ff4f8b;
+    color:white;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    opacity:0.95;
+}
+
+#search{
+    width:100%;
+    margin-bottom:15px;
+}
+
+/* Progress Bar */
+
+.progress-container{
+    width:100%;
+    height:22px;
+    background:#ffe8f1;
+    border-radius:50px;
+    overflow:hidden;
+    margin-top:15px;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    background:#ff4f8b;
+    transition:0.5s;
+}
+
+#progressText{
+    margin-top:8px;
+    font-weight:500;
+}
+
+/* Statistics */
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+    gap:10px;
+}
+
+.stats p{
+    flex:1;
+    background:#fff0f6;
+    padding:12px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+}
+
+/* Task List */
+
+#taskList{
+    list-style:none;
+    margin-top:20px;
+}
+
+#taskList li{
+    background:#fff0f6;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    transition:0.3s;
+}
+
+#taskList li:hover{
+    transform:translateY(-3px);
+}
+
+.task-info{
+    flex:1;
+}
+
+.task-title{
+    font-size:18px;
+    font-weight:600;
+}
+
+.completed{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.priority-high{
+    color:red;
+    font-weight:600;
+}
+
+.priority-medium{
+    color:orange;
+    font-weight:600;
+}
+
+.priority-low{
+    color:green;
+    font-weight:600;
+}
+
+/* Action Buttons */
+
+.actions{
+    display:flex;
+    gap:8px;
+}
+
+.edit-btn{
+    background:#ffc107;
+}
+
+.delete-btn{
+    background:#dc3545;
+}
+
+.complete-btn{
+    background:#28a745;
+}
+
+/* Dark Mode */
+
+.dark{
+    background:#121212;
+}
+
+.dark .container{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark input,
+.dark select{
+    background:#2b2b2b;
+    color:white;
+    border:1px solid #444;
+}
+
+.dark #taskList li{
+    background:#2a2a2a;
+}
+
+.dark .stats p{
+    background:#2a2a2a;
+}
+
+.dark .progress-container{
+    background:#333;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .auth{
+        grid-template-columns:1fr;
+    }
+
+    .input-section{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+
+    #taskList li{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .actions{
+        width:100%;
+        justify-content:space-between;
+    }
+}
