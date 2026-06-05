@@ -140,15 +140,14 @@ smart-task-manager
 
 ### 🏠 Home Page
 
-<img width="100%" src="assets/homepage.png">
+<img width="100%" src="<img width="1795" height="888" alt="Screenshot 2026-06-05 211128" src="https://github.com/user-attachments/assets/32b47e0f-11f9-48f5-b94d-cca53a1071f5" />
+">
 
 ### 🌙 Dark Mode
 
-<img width="100%" src="assets/darkmode.png">
+<img width="100%" src="<img width="1166" height="730" alt="image" src="https://github.com/user-attachments/assets/918a1628-0e6d-45d2-bcfc-a446de4f1768" />
+">
 
-### 📄 PDF Export
-
-<img width="100%" src="assets/pdf-export.png">
 
 ---
 
