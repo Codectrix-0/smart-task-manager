@@ -472,7 +472,7 @@ localStorage.setItem(
 "darkMode",
 document.body.classList.contains(
 "dark"
-
+  }
 );
 }
 );
