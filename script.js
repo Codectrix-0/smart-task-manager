@@ -6,7 +6,6 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
 import {
   getFirestore,
   collection,
@@ -29,9 +28,7 @@ const firebaseConfig = {
   messagingSenderId: "YOUR_ID",
   appId: "YOUR_APP_ID"
 };
-
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -46,65 +43,41 @@ let tasks = [];
 ========================= */
 
 window.signup = async () => {
-
   const email =
     document.getElementById("email").value;
-
   const password =
     document.getElementById("password").value;
-
   try {
-
     await createUserWithEmailAndPassword(
       auth,
       email,
       password
     );
-
     alert("Signup Successful");
-
   } catch (error) {
-
     alert(error.message);
-
   }
-
 };
-
 window.login = async () => {
-
   const email =
     document.getElementById("email").value;
-
   const password =
     document.getElementById("password").value;
-
   try {
-
     await signInWithEmailAndPassword(
       auth,
       email,
       password
     );
-
     alert("Login Successful");
-
   } catch (error) {
-
     alert(error.message);
-
   }
-
 };
-
 onAuthStateChanged(auth, user => {
-
   if (user) {
-
     loadTasks();
-
   }
-
 });
 
 /* =========================
@@ -480,36 +453,26 @@ const themeBtn =
 document.getElementById(
   "themeBtn"
 );
-
 if (
 localStorage.getItem(
 "darkMode"
 ) === "true"
 ) {
-
 document.body.classList.add(
 "dark"
 );
-
 }
-
 themeBtn.addEventListener(
 "click",
 () => {
-
 document.body.classList.toggle(
 "dark"
 );
-
 localStorage.setItem(
-
 "darkMode",
-
 document.body.classList.contains(
 "dark"
-)
 
 );
-
 }
 );
