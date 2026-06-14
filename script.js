@@ -17,9 +17,9 @@ import {
   doc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-/* =========================
+/* ====
    FIREBASE CONFIG
-========================= */
+==== */
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -37,15 +37,15 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-/* =========================
+/* ====
    GLOBAL TASK ARRAY
-========================= */
+==== */
 
 let tasks = [];
 
-/* =========================
+/* ====
    AUTH
-========================= */
+==== */
 
 window.signup = async () => {
 
@@ -109,9 +109,9 @@ onAuthStateChanged(auth, user => {
 
 });
 
-/* =========================
+/* ====
    ADD TASK
-========================= */
+==== */
 
 window.addTask = async () => {
 
@@ -162,9 +162,9 @@ window.addTask = async () => {
 
 };
 
-/* =========================
+/* ====
    LOAD TASKS
-========================= */
+==== */
 
 async function loadTasks() {
 
@@ -188,9 +188,9 @@ async function loadTasks() {
 
 }
 
-/* =========================
+/* ====
    DELETE TASK
-========================= */
+==== */
 
 window.deleteTask = async function(id) {
 
@@ -202,9 +202,9 @@ window.deleteTask = async function(id) {
 
 };
 
-/* =========================
+/* ====
    COMPLETE TASK
-========================= */
+==== */
 
 window.toggleComplete = async function(id, currentValue) {
 
@@ -219,9 +219,9 @@ window.toggleComplete = async function(id, currentValue) {
 
 };
 
-/* =========================
+/* ====
    EDIT TASK
-========================= */
+==== */
 
 window.editTask = async function(id, oldText) {
 
@@ -244,9 +244,9 @@ window.editTask = async function(id, oldText) {
 
 };
 
-/* =========================
+/* ====
    SEARCH + RENDER
-========================= */
+==== */
 
 window.renderTasks = function() {
 
@@ -356,9 +356,9 @@ window.renderTasks = function() {
 
 };
 
-/* =========================
+/* ====
    STATS
-========================= */
+==== */
 
 function updateStats() {
 
@@ -388,9 +388,9 @@ function updateStats() {
 
 }
 
-/* =========================
+/* ====
    PROGRESS BAR
-========================= */
+==== */
 
 function updateProgress() {
 
@@ -426,9 +426,9 @@ function updateProgress() {
 
 }
 
-/* =========================
+/* ====
    PDF EXPORT
-========================= */
+==== */
 
 window.downloadPDF =
 function() {
@@ -471,9 +471,9 @@ function() {
 
 };
 
-/* =========================
+/* ====
    DARK MODE
-========================= */
+==== */
 
 const themeBtn =
 document.getElementById(
