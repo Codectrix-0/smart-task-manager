@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
@@ -1026,5 +1026,4 @@ document.body.classList.contains(
 );
 
 }
->>>>>>> 4ef45140f31b82bb017db3d6f0c62e8b1c17cee9
 );
