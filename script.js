@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
 import {
   getFirestore,
   collection,
@@ -20,15 +21,19 @@ import {
    FIREBASE CONFIG
 ========================= */
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_BUCKET",
-  messagingSenderId: "YOUR_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDkdwkbSVU5EmuHVt7cNvBUADb0Bvxl25s",
+  authDomain: "smart-task-manager-142d4.firebaseapp.com",
+  projectId: "smart-task-manager-142d4",
+  storageBucket: "smart-task-manager-142d4.firebasestorage.app",
+  messagingSenderId: "546844205969",
+  appId: "1:546844205969:web:816b3a7502613c0bf97030",
+  measurementId: "G-YP8BK7L8Z7"
 };
+
 const app = initializeApp(firebaseConfig);
+
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -43,41 +48,65 @@ let tasks = [];
 ========================= */
 
 window.signup = async () => {
+
   const email =
     document.getElementById("email").value;
+
   const password =
     document.getElementById("password").value;
+
   try {
+
     await createUserWithEmailAndPassword(
       auth,
       email,
       password
     );
+
     alert("Signup Successful");
+
   } catch (error) {
+
     alert(error.message);
+
   }
+
 };
+
 window.login = async () => {
+
   const email =
     document.getElementById("email").value;
+
   const password =
     document.getElementById("password").value;
+
   try {
+
     await signInWithEmailAndPassword(
       auth,
       email,
       password
     );
+
     alert("Login Successful");
+
   } catch (error) {
+
     alert(error.message);
+
   }
+
 };
+
 onAuthStateChanged(auth, user => {
+
   if (user) {
+
     loadTasks();
+
   }
+
 });
 
 /* =========================
@@ -453,26 +482,36 @@ const themeBtn =
 document.getElementById(
   "themeBtn"
 );
+
 if (
 localStorage.getItem(
 "darkMode"
 ) === "true"
 ) {
+
 document.body.classList.add(
 "dark"
 );
+
 }
+
 themeBtn.addEventListener(
 "click",
 () => {
+
 document.body.classList.toggle(
 "dark"
 );
+
 localStorage.setItem(
+
 "darkMode",
+
 document.body.classList.contains(
 "dark"
-  }
+)
+
 );
+
 }
 );
